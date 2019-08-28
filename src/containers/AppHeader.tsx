@@ -12,6 +12,7 @@ export type AppHeaderProps = {
 
 // FC = functional component
 // set the component type the same of expected props
+// <type> = type assertion, when what type of data is needed beforehand
 const AppHeader: React.FC<AppHeaderProps> = React.memo(
 	({ title, description, links }) => {// set the expected props to be passed in the component
 		return (
