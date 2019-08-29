@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import AppHeader, { AppHeaderProps } from './containers/AppHeader';
 import AppBody from './containers/AppBody';
+import Item, { TodoItemType } from './components/Item';
 
 const bodyQuote = `
   Spicy jalapeno bacon ipsum dolor amet ball tip turducken brisket veniam beef ribs ipsum, ex pig doner strip steak t-bone.
@@ -34,6 +34,11 @@ const App: React.FC = () => {
       }
     ]
   };
+  const todoItem: TodoItemType = {
+    id: '1',
+    title: 'uy',
+    completed: false
+  }
 
 
   return (
@@ -49,6 +54,7 @@ const App: React.FC = () => {
           Body
       </p>
       </AppBody>
+      <Item todo={todoItem} />
     </div>
   );
 }
